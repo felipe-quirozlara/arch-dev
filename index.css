@@ -1,0 +1,206 @@
+@import url("/utilis.css");
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+/* Navegacion */
+
+nav {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background-color: #1c1c1c;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+nav img {
+    width: 42px;
+    height: auto;
+    background-color: white;
+    border-radius: 50%;
+    padding-bottom: 1px;
+    margin-left: 16px;
+}
+
+
+/* inicio home */
+section{
+    display: block;
+    width: 100%;
+    top: 72px;
+    position: relative;
+}
+section#home, section#aboutUs, section#ourProyects {
+    background-color: #1c1c1c;
+    color: white;
+}
+section#home img {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+section .title{
+    font-size: 82px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+section h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    font-weight: lighter;
+    margin: 0;
+}
+section .title::first-letter, .color-orange{
+    color: rgb(255, 136, 0);
+}
+section p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #9b9b9b;
+    font-size: 24px;
+}
+
+section h2.center-title{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 38px;
+    padding-top: 24px;
+}
+
+section#aboutUs{
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section#aboutUs p{
+    text-align: center;
+    width: 75%;
+}
+section#aboutList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 0;
+}
+
+section#aboutList .card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+section#aboutList hr{
+    border-top: 1px solid #1c1c1c;
+}
+section#aboutList .card h1{
+    font-size: 48px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 16px;
+    color: #1c1c1c;
+    margin: 0 16px;
+}
+section#aboutList .card small{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 136, 0);
+    font-size: 20px;
+}
+section#aboutList .card p {
+    color: #1c1c1c;
+    margin: 0;
+}
+section#aboutList div, section#aboutList article{
+    width: 75%;
+}
+
+section#ourProyects{
+    display: flex;
+    justify-content: center;
+}
+section#ourProyects .container{
+    width: 75%;
+}
+
+section#ourProyects .container article img{
+    width: 237px;
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+}
+
+section#ourProyects .container article .overlay{
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8f8f8fcf;
+}
+
+section#ourProyects .container article:hover .overlay {
+    opacity: 1;
+}
+
+
+
+@media (max-width: 768px) {
+    section .flex.flex-row{
+        flex-direction: column;
+    }
+    section#home img{
+        width: 100%;
+    }
+    section .title{
+        margin-top: 20px;
+    }
+    section#aboutUs p{
+        width: 100%;
+    }
+    section#aboutList div, section#aboutList article{
+        width: 90%;
+    }
+    section#ourProyects .container{
+        width: 100%;
+    }
+    section#ourProyects .container article{
+        margin-bottom: 24px;
+    }
+    section#ourProyects .container article img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 1250px) {
+    section#home .title, section#home p, section#home h4{
+        margin-left: 100px;
+    }
+    section#ourProyects .container article img {
+        width: 330px;
+    }
+}
